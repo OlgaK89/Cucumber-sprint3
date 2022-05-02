@@ -1,7 +1,4 @@
 package stepDefs;
-
-import io.cucumber.java.an.E;
-import io.cucumber.java.bs.A;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -49,7 +46,7 @@ public class EmplAndIncStepDefs {
         emplAndIncPage.position.sendKeys();
         emplAndIncPage.city.sendKeys();
         emplAndIncPage.city.sendKeys(Keys.ARROW_DOWN, Keys.END);
-        emplAndIncPage.startDate.sendKeys();
+        emplAndIncPage.startDate.sendKeys("03.05.2010");
 
 
 
@@ -97,6 +94,8 @@ public class EmplAndIncStepDefs {
         Assert.assertEquals(str.get(Integer.parseInt("GROSS MONTHLY INCOME*")), emplAndIncPage.grossIncome.getText());
         Assert.assertEquals(str.get(Integer.parseInt("MONTHLY OVERTIME")), emplAndIncPage.overtime.getText());
         Assert.assertEquals(str.get(Integer.parseInt("MONTHLY BONUSES")), emplAndIncPage.bonuses.getText());
+
+        emplAndIncPage.totalIncome.getText();
 
 
 
